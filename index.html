@@ -27,14 +27,59 @@
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="/favicon-144.png">
     <meta name="msapplication-config" content="/browserconfig.xml">
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=46487135"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?r=6843131"></script>
+    <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js?r=1116100"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js"></script>
   <link href="css/app.css" rel="stylesheet"></head>
   <body>
     <header class="header"></header>
     <div class="wrapper">
       <div class="base">
-        <section class="section">
-          <div class="canvas"></div>
+        <section class="section model">
+          <div class="model_canvas canvas"></div>
         </section>
+        <div class="scroll_track">
+          <div class="scroll_track_content">
+            <section class="section heading">
+              <div class="heading_out">
+                <div class="heading_in">
+                  <div class="heading_bg">
+                    <div class="heading_title">Lorem.</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section heading">
+              <div class="heading_out">
+                <div class="heading_in">
+                  <div class="heading_bg">
+                    <div class="heading_title">Ipsum dolor sit amet.</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section heading">
+              <div class="heading_out">
+                <div class="heading_in">
+                  <div class="heading_bg">
+                    <div class="heading_title">Dolor sit amet.</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section heading">
+              <div class="heading_out">
+                <div class="heading_in">
+                  <div class="heading_bg">
+                    <div class="heading_title">Sit amet.</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
       </div>
       <footer class="footer"></footer>
     </div>
