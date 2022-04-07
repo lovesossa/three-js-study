@@ -1,3 +1,80 @@
-#canvas {
-	width: 70%;
+
+.model {
+	z-index: 100;
+	position: fixed !important;
+	top: 0;
+	left: 0;
+
+	pointer-events: none;
+
+	width: 100vw;
+	height: 100vh;
+}
+
+.model_canvas {
+
+}
+
+.heading {
+	@extend %global_flex_block_row_wrap_flex-start_center;
+
+	width: 100%;
+	height: 100vh;
+	position: fixed !important;
+	visibility: hidden;
+}
+
+.heading_out {
+	width: 100%;
+	height: 100%;
+	overflow-y: hidden;
+}
+
+.heading_in {
+	width: 100%;
+	height: 100%;
+	overflow-y: hidden;
+}
+
+$bg-gradient: linear-gradient(
+  180deg,
+  rgba(0, 0, 0, 0.6) 0%,
+  rgba(0, 0, 0, 0.3) 100%
+);
+
+.heading_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100vh;
+	padding: 10%;
+
+	background-size: cover;
+	background-position: center;
+
+	.heading:nth-child(6n + 1) & {
+		background-image: $bg-gradient, url(https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920);
+	}
+	.heading:nth-child(6n + 2) & {
+		background-image: $bg-gradient, url("https://images.unsplash.com/photo-1617128734662-66da6c1d3505?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzc3NTM3MA&ixlib=rb-1.2.1&q=75&w=1920");
+	}
+	.heading:nth-child(6n + 3) & {
+		background-image: $bg-gradient, url(https://images.unsplash.com/photo-1617438817509-70e91ad264a5?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU2MDk4Mg&ixlib=rb-1.2.1&q=75&w=1920);
+	}
+	.heading:nth-child(6n + 4) & {
+		background-image: $bg-gradient, url(https://images.unsplash.com/photo-1617412327653-c29093585207?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU2MDgzMQ&ixlib=rb-1.2.1&q=75&w=1920);
+	}
+	.heading:nth-child(6n + 5) & {
+		background-image: $bg-gradient,url("https://images.unsplash.com/photo-1617141636403-f511e2d5dc17?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxODAzMjc4Mw&ixlib=rb-1.2.1&q=75w=1920");
+	}
+}
+
+.heading_title {
+	width: 30%;
+	font-size: 7.2rem;
+	font-weight: 700;
+	letter-spacing: .02em;
+	color: $white;
 }

@@ -3,5 +3,22 @@ extends ../layout/_layout
 block vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Index'}
 block content_block
-	section.section
-		.canvas
+	section.section.model
+		.model_canvas.canvas
+
+	.scroll_track
+		.scroll_track_content
+			-
+				list = [
+					'Lorem.',
+					'Ipsum dolor sit amet.',
+					'Dolor sit amet.',
+					'Sit amet.',
+				]
+			each el in list
+				section.section.heading
+					.heading_out
+						.heading_in
+							.heading_bg
+								.heading_title!= el
+
